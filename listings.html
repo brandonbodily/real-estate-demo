@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Property Listings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Property Listings</h1>
+        <p>Contact: Your Name | Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | Phone:
+            123-456-7890</p>
+    </header>
+    <main>
+        <section id="filters">
+            <h2>Filter Search</h2>
+            <form id="filterForm">
+                <label for="priceRange">Price Range:</label>
+                <select id="priceRange">
+                    <option value="">Any</option>
+                    <option value="0-100000">$0 - $100,000</option>
+                    <option value="100001-200000">$100,001 - $200,000</option>
+                    <option value="200001-300000">$200,001 - $300,000</option>
+                </select>
+
+                <label for="homeType">Home Type:</label>
+                <select id="homeType">
+                    <option value="">Any</option>
+                    <option value="Single Family">Single Family</option>
+                    <option value="Condo">Condo</option>
+                </select>
+
+                <label for="bedrooms">Bedrooms:</label>
+                <select id="bedrooms">
+                    <option value="">Any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                </select>
+
+                <label for="bathrooms">Bathrooms:</label>
+                <select id="bathrooms">
+                    <option value="">Any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                </select>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="City or ZIP Code" />
+
+                <button type="button" onclick="filterListings()">Search</button>
+            </form>
+        </section>
+        <section id="listings">
+            <h2>Available Properties</h2>
+            <div id="listingsContainer">
+                <!-- Listings will be injected here -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
