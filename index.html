@@ -4,91 +4,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Service - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Real Estate Pro - Find Your Dream Home</title>
+    <meta name="description"
+        content="Discover your perfect property with Real Estate Pro. Expert guidance and extensive listings to help you find your dream home.">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: url('/api/placeholder/1200/400') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .intro,
+        .listings,
+        .signup {
+            padding: 2rem 0;
+        }
+
+        .intro {
+            background-color: var(--light-bg);
+        }
+
+        .listings .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .listing {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .listing img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Welcome to Our Real Estate Service</h1>
-        <p>Your gateway to exclusive property listings.</p>
+        <div class="container">
+            <h1>Real Estate Pro</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#listings">Listings</a></li>
+                    <li><a href="#signup">Sign Up</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="introduction">
-            <h2>About Our Service</h2>
-            <p>We provide top-notch real estate services tailored to your needs. Access exclusive property listings by
-                signing up today.</p>
-        </section>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Find Your Dream Home</h2>
+                <p>Discover the perfect property with our expert services and extensive listings.</p>
+                <a href="#signup" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
 
-        <section id="signup-form">
-            <h2>Sign Up to View Listings</h2>
-            <form id="signupForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+    <section class="intro">
+        <div class="container">
+            <h2>Welcome to Real Estate Pro</h2>
+            <p>At Real Estate Pro, we're committed to helping you find the perfect home. With our extensive listings and
+                expert guidance, your dream property is just a click away.</p>
+        </div>
+    </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+    <section id="listings" class="listings">
+        <div class="container">
+            <h2>Featured Listings</h2>
+            <div class="listings-grid">
+                <div class="listing">
+                    <img src="/api/placeholder/300/200" alt="House 1">
+                    <h3>Beautiful Family Home</h3>
+                    <p>3 bed, 2 bath, $350,000</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="listing">
+                    <img src="/api/placeholder/300/200" alt="House 2">
+                    <h3>Modern City Apartment</h3>
+                    <p>2 bed, 1 bath, $250,000</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="listing">
+                    <img src="/api/placeholder/300/200" alt="House 3">
+                    <h3>Cozy Suburban Cottage</h3>
+                    <p>2 bed, 1 bath, $200,000</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required />
-
-                <button type="submit">Sign Up</button>
+    <section id="signup" class="signup">
+        <div class="container">
+            <h2>Sign Up to Access Full Listings</h2>
+            <form id="signup-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone" required>
+                <button type="submit" class="btn">Sign Up</button>
             </form>
-        </section>
-
-        <section id="listings">
-            <h2>Available Listings</h2>
-            <div id="filters">
-                <label for="priceRange">Price Range:</label>
-                <select id="priceRange">
-                    <option value="">Any</option>
-                    <option value="0-100000">$0 - $100,000</option>
-                    <option value="100001-200000">$100,001 - $200,000</option>
-                    <option value="200001-300000">$200,001 - $300,000</option>
-                </select>
-
-                <label for="homeType">Home Type:</label>
-                <select id="homeType">
-                    <option value="">Any</option>
-                    <option value="Single Family">Single Family</option>
-                    <option value="Condo">Condo</option>
-                </select>
-
-                <label for="bedrooms">Bedrooms:</label>
-                <select id="bedrooms">
-                    <option value="">Any</option>
-                    <option value="1">1+</option>
-                    <option value="2">2+</option>
-                    <option value="3">3+</option>
-                </select>
-
-                <label for="bathrooms">Bathrooms:</label>
-                <select id="bathrooms">
-                    <option value="">Any</option>
-                    <option value="1">1+</option>
-                    <option value="2">2+</option>
-                    <option value="3">3+</option>
-                </select>
-
-                <label for="location">Location:</label>
-                <input type="text" id="location" placeholder="City or ZIP Code">
-
-                <button onclick="filterListings()">Search</button>
-            </div>
-
-            <div id="listingsContainer">
-                <!-- Listings will be populated here -->
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>Contact: Your Name | Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | Phone:
-            123-456-7890</p>
+        <div class="container">
+            <p>&copy; 2024 Real Estate Pro. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            // In a real application, you would send this data to your server
+            console.log('Sign-up submitted:', { name, email, phone });
+            alert(`Thank you for signing up, ${name}! We'll contact you soon.`);
+
+            // Clear the form
+            this.reset();
+        });
+
+        // Simulate loading more listings
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                if (this.textContent === 'View Details') {
+                    e.preventDefault();
+                    alert('In a full version, this would load the listing details. Sign up to access full features!');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
