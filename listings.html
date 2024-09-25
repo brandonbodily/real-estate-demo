@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Listings</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,13 +11,14 @@
 <body>
     <header>
         <h1>Property Listings</h1>
-        <p>Contact: Your Name | Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | Phone:
-            123-456-7890</p>
+        <p>Find the perfect property that meets your needs. Contact us for more information.</p>
     </header>
+
     <main>
-        <section id="filters">
-            <h2>Filter Search</h2>
-            <form id="filterForm">
+        <section id="listings">
+            <h2>Available Listings</h2>
+            <div id="filters">
+                <!-- Same filter options as on the homepage -->
                 <label for="priceRange">Price Range:</label>
                 <select id="priceRange">
                     <option value="">Any</option>
@@ -49,18 +51,22 @@
                 </select>
 
                 <label for="location">Location:</label>
-                <input type="text" id="location" placeholder="City or ZIP Code" />
+                <input type="text" id="location" placeholder="City or ZIP Code">
 
-                <button type="button" onclick="filterListings()">Search</button>
-            </form>
-        </section>
-        <section id="listings">
-            <h2>Available Properties</h2>
+                <button onclick="filterListings()">Search</button>
+            </div>
+
             <div id="listingsContainer">
-                <!-- Listings will be injected here -->
+                <!-- Listings will be populated here -->
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>Contact: Your Name | Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | Phone:
+            123-456-7890</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 

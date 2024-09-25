@@ -20,6 +20,7 @@ const mockListings = [
     title: "Modern Condo Downtown",
     description: "Conveniently located condo with modern amenities.",
   },
+  // Add more mock listings here...
 ];
 
 // Function to handle sign-up form submission

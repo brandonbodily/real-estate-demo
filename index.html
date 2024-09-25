@@ -3,20 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Real Estate Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Service - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <h1>Welcome to Our Real Estate Service</h1>
+        <p>Your gateway to exclusive property listings.</p>
     </header>
+
     <main>
         <section id="introduction">
-            <p>Discover your dream home with us. Sign up to access exclusive listings.</p>
+            <h2>About Our Service</h2>
+            <p>We provide top-notch real estate services tailored to your needs. Access exclusive property listings by
+                signing up today.</p>
         </section>
+
         <section id="signup-form">
-            <h2>Sign Up</h2>
+            <h2>Sign Up to View Listings</h2>
             <form id="signupForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required />
@@ -27,14 +33,61 @@
                 <label for="phone">Phone:</label>
                 <input type="tel" id="phone" name="phone" required />
 
-                <button type="submit">Access Listings</button>
+                <button type="submit">Sign Up</button>
             </form>
         </section>
+
+        <section id="listings">
+            <h2>Available Listings</h2>
+            <div id="filters">
+                <label for="priceRange">Price Range:</label>
+                <select id="priceRange">
+                    <option value="">Any</option>
+                    <option value="0-100000">$0 - $100,000</option>
+                    <option value="100001-200000">$100,001 - $200,000</option>
+                    <option value="200001-300000">$200,001 - $300,000</option>
+                </select>
+
+                <label for="homeType">Home Type:</label>
+                <select id="homeType">
+                    <option value="">Any</option>
+                    <option value="Single Family">Single Family</option>
+                    <option value="Condo">Condo</option>
+                </select>
+
+                <label for="bedrooms">Bedrooms:</label>
+                <select id="bedrooms">
+                    <option value="">Any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                </select>
+
+                <label for="bathrooms">Bathrooms:</label>
+                <select id="bathrooms">
+                    <option value="">Any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                </select>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="City or ZIP Code">
+
+                <button onclick="filterListings()">Search</button>
+            </div>
+
+            <div id="listingsContainer">
+                <!-- Listings will be populated here -->
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>Contact: Your Name | Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | Phone:
             123-456-7890</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

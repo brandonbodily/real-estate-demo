@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Admin - Leads Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Leads Management</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -11,6 +12,7 @@
     <header>
         <h1>Admin - Leads Management</h1>
     </header>
+
     <main>
         <section id="leads">
             <h2>Registered Users</h2>
@@ -26,12 +28,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Leads data will be injected here -->
+                    <!-- Leads data will be populated here from localStorage -->
                 </tbody>
             </table>
+
             <button onclick="exportData()">Export Data</button>
         </section>
     </main>
+
+    <footer>
+        <p>Contact: Your Name | Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | Phone:
+            123-456-7890</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
